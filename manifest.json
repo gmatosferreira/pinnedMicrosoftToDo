@@ -1,0 +1,22 @@
+{
+
+    "manifest_version": 2,
+    "name": "Pinned Microsoft To Do",
+    "version": "0.1",
+
+    "description": "Abre a aplicação do Microsoft To Do num separador fixo.",
+    "homepage_url": "https://github.com/gmatosferreira/pinnedMicrosoftToDo",
+    "icons": {
+        "48": "icons/todologo-48.png"
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "browser_action": {
+        "default_icon": "icons/todologo-32.png",
+        "default_title": "Pinned Microsoft To Do"
+    }
+
+}
