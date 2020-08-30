@@ -1,0 +1,1 @@
+document.getElementById("print1").src = browser.runtime.getURL("images/usage.png");
