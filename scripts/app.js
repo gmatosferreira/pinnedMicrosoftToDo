@@ -1,15 +1,17 @@
 function startApp() {
     // Get openned tabs and process them to open new one
-    url = "https://to-do.live.com/tasks/myday";
     let querying = browser.tabs.query({pinned: true, windowId: browser.windows.WINDOW_ID_CURRENT});
     querying.then(openTab, onError);
 }
   
 function openTab(tabs) {
+    url = "https://to-do.live.com/tasks/myday";
+    urlCheck = "to-do.live.com";
+
     // Check if tab is already created
     appTab = undefined;
     for (let tab of tabs) {
-        if (tab.url.indexOf(url)>=0) {
+        if (tab.url.indexOf(urlCheck)>=0) {
             appTab = tab;
         }
     }
