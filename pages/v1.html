@@ -3,6 +3,13 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../resources/bootstrap.min.css">
+
+        <style>
+            .nav-link {transition: .5s;}
+            .nav-link:hover {cursor: pointer;}
+            .nav-link.active {color: #4581F4;}
+            iframe {width: 100%; height: 100%; border: none;}
+        </style>
     </head>
     <body class="py-5" style="background-color: #F8F8F8;">
         <div class="col-8 offset-2">
@@ -10,48 +17,36 @@
             <!-- Header -->
             <div class="d-flex flex-column">
                 <img id="icon" src="" class="mx-auto" height="">
-                <div id="title" class="mx-auto text-center">
+                <div id="title" class="mx-auto text-center d-flex flex-column">
                     <h1 class="display-4">Pinned Microsoft To Do</h1>    
-                    <p class="lead">Versão 1.0</p>
-                    <p>Seja bem-vindo à versão de lançamento da <span class="font-weight-bold">Pinned Microsoft To Do</span>!</p>
+                    <ul class="nav mb-3 mx-auto" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <p class="nav-link active" id="pills-pt-tab" data-toggle="pill" href="#pills-pt" role="tab" aria-controls="pills-pt" aria-selected="true">🇵🇹 Português</p>
+                        </li>
+                        <li class="nav-item">
+                            <p class="nav-link" id="pills-en-tab" data-toggle="pill" href="#pills-en" role="tab" aria-controls="pills-en" aria-selected="false">🇺🇸 English</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Novidades -->
-            <div class="col-6 offset-3 text-justify my-5">
-                <h4>Novidades</h4>
-                <hr>
-                <p>Depois da versão beta, hoje chega até si a primeira versão desta extensão.</p>
-                <p>Com esta atualização foram implementadas novas funcionalidades que pretendem facilitar a sua aprendizagem e reduzir o esforço na sua utilização, destacando-se:</p>
-                <ul>
-                    <li>Ao carregar no ícone da Pinned Microsoft To Do na sua barra de tarefas, em vez do separador da aplicação ser aberto em segundo plano, é aberto em primeiro (ou seja, o separador atual é alterado para o da aplicação);</li>
-                    <li>Se a aplicação já estiver aberta e carregar no ícone da Pinned Microsoft To Do novamente, em vez de abrir um separador igual, simplesmente altera o atual para o da aplicação.</li>
-                </ul>
-                <p>Destaca-se ainda a correção da ligação da aplicação, que por alteração da Microsoft estava a encaminhar para um ecrã de acesso. Agora abre a lista "O Meu Dia".</p>
+            <div class="tab-content" id="pills-tabContent" height="auto">
+                <div class="tab-pane fade show active" id="pills-pt" role="tabpanel" aria-labelledby="pills-pt-tab">
+                    <iframe src="v1_pt.html" width="100%" id="iframept"></iframe>
+                </div>
+                <div class="tab-pane fade" id="pills-en" role="tabpanel" aria-labelledby="pills-en-tab">
+                    <iframe src="v1_en.html" width="100%" id="iframeen"></iframe>
+                </div>
             </div>
 
-            <!-- Instruções -->
-            <div class="col-6 offset-3 text-justify my-5">
-                <h4>Funcionamento</h4>
-                <hr>
-                <p>Esta extensão pretende ser uma forma rápida e cómoda de abrir a aplicação Microsoft To Do no seu navegador!</p>
-                <p>Para tal basta carregar no símbolo da extensão na barra de ferramentas do seu navegador (canto superior direito).</p>
-                <img id="print1" src="" width="80%" style="margin-left:10%; margin-bottom: 1rem; margin-right: 10%;">
-            </div>
-
-            <!-- Info desenvolvimento -->
-            <div class="col-6 offset-3 text-justify my-5">
-                <h4>Desenvolvimento</h4>
-                <hr>
-                <p>A <span class="font-weight-bold">Pinned Microsoft To Do</span> é uma extensão desenvolvida por <a target="_blank" href="https://gmatos.pt">Gonçalo Matos</a> de forma independente e aberta: gratuita para quem a quiser utilizar e disponível para quem a quiser modificar.</p>
-                <p><a target="_blank" href="https://github.com/gmatosferreira/pinnedMicrosoftToDo">Repositório GitHub</a></p>
-                <p>Se encontrar algum erro ou quiser fazer alguma sugestão, não hesite em entrar em contacto através do endereço hello[at]gmatos[dot]pt.</p>
-            </div>
+            
 
         </div>
         
 
         <script src="v1.js"></script>
+        <script src="../resources/jquery-3.4.1.min.js"></script>
+        <script src="../resources/bootstrap.min.js"></script>
 
     </body>
 </html>
