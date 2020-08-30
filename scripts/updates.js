@@ -24,7 +24,7 @@ function validateVersion(version) {
             active: true
         });
         // Update version
-        //updateVersion();
+        updateVersion();
     }
 }
 
