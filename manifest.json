@@ -2,21 +2,31 @@
 
     "manifest_version": 2,
     "name": "Pinned Microsoft To Do",
-    "version": "0.1",
-
-    "description": "Abre a aplicação do Microsoft To Do num separador fixo.",
+    "version": "1.0",
+    "description": "Open the Microsoft To Do app on a pinned tab.",
     "homepage_url": "https://github.com/gmatosferreira/pinnedMicrosoftToDo",
     "icons": {
         "48": "icons/todologo-48.png"
     },
-
+    "permissions": [
+        "<all_urls>",
+        "tabs",
+        "storage"
+    ],
     "background": {
-        "scripts": ["background.js"]
+        "scripts": [
+            "scripts/app.js",
+            "scripts/updates.js"
+        ]
     },
 
     "browser_action": {
         "default_icon": "icons/todologo-32.png",
         "default_title": "Pinned Microsoft To Do"
-    }
-
+    },
+    "web_accessible_resources": [
+        "icons/*",
+        "images/*",
+        "pages/*"
+    ]
 }
