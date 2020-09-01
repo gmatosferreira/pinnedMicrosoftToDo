@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "Pinned Microsoft To Do",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Open the Microsoft To Do app on a pinned tab.",
     "homepage_url": "https://github.com/gmatosferreira/pinnedMicrosoftToDo",
     "icons": {
